@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event args</title>
+    <script>
+        function openImage(EventArgs){
+            if(EventArgs.ctrlKey){
+                window.open("/assets/images/hotel-ACroom.jpg", "Room", width="094", height="500");
+            }
+            else{
+
+                alert("Please Use Ctrl + Click")
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+    <img onclick="openImage(event)" src="/assets/images/hotel-ACroom.jpg" width="100" height="100" title="Ctrl + Click to View Large Screen" alt="">
+    
+</body>
+</html>

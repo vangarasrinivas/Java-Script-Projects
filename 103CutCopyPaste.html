@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cut Copy Paste</title>
+    <script>
+        function cut(){
+            document.getElementById("msg").innerHTML="Removed : Removed to Clipboard";
+        }
+
+        function copy(){
+            document.getElementById("msg").innerHTML="Copied : Copied to Clipboard";
+        }
+
+
+        function paste(){
+            document.getElementById("msg").innerHTML="inserted : inserted to Clipboard";
+        }
+    </script>
+</head>
+<body>
+    <textarea oncut="cut()" oncopy="copy()" onpaste="paste()" name="" id="" cols="30" rows="10"></textarea>
+    <h4 id="msg"></h4>
+</body>
+</html>

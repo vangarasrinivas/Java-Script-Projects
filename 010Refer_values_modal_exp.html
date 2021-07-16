@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer Values Modal</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        label{
+            font-weight: bold;
+        }
+        .box{
+            width: 300px;
+            border:2px solid;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 5px 5px 5px rgb(171, 17, 185);
+            background-color:rgb(79, 231, 49);
+
+        }
+
+        
+    </style>
+    <script type="text/javascript">
+
+        function register(){
+            document.getElementById("lblname").innerText=document.getElementById("pname").value;
+
+            document.getElementById("lblprice").innerText=document.getElementById("pprice").value;
+
+            document.getElementById("lblshippedto").innerText=document.getElementById("pshipped").value;
+
+            document.getElementById("lbldate").innerText=document.getElementById("pmandate").value;
+
+
+            var stock=document.getElementById("stock_status");
+            var status;
+            if(stock.checked){
+                status="Stock Available";
+            }
+            else
+            {
+                status="Out of Stock";
+            }
+
+            document.getElementById("lblstock").innerText=status;
+
+
+
+
+                // var stock = document.getElementById("stock_status");
+                // var status;
+                // if(stock.checked) {
+                //     status = "Available";
+                // } else {
+                //     status = "Out of Stock";
+                // }
+
+                // document.getElementById("lblstock").innerText = status;
+
+
+
+
+
+        }
+
+
+    
+
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="box">
+            <form action="">
+                <h5 class="text-center text-danger">Register Product Details</h5>
+                <div class="form-group">
+                    <label for="" class="form-label">Name</label>
+                    <div>
+                        <input type="text" class="form-control" id="pname">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">Price</label>
+                    <div>
+                        <input type="text" class="form-control" id="pprice">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="" class="form-label">Shipped to</label>
+                    <div>
+                        <select name="" id="pshipped" class="form-control">
+                            <option value="hyderabd">Hyd</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="bangalur">bangalur</option>
+                        </select>
+                        
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">Manufacture Date</label>
+                    <div>
+                        <input type="date" class="form-control" id="pmandate">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">In Stock</label>
+                    
+                        <div>
+                            <input type="checkbox" id="stock_status"> Yes
+                        </div>
+                    
+                </div>
+
+                
+            </form>
+
+            <div>
+                <button onclick="register()" class="btn btn-primary" data-bs-target="#registerdetails" data-bs-toggle="modal">Register</button>
+            </div>
+
+
+            <div class="modal" id="registerdetails">
+                <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="text-primary">Product Details</h2>
+                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <table class="table table-hover bg-light" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td>Name</td>
+                                        <td id="lblname"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Price</td>
+                                        <td id="lblprice"></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Shhipped to</td>
+                                        <td id="lblshippedto"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Manufactured</td>
+                                        <td id="lbldate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stock</td>
+                                        <td id="lblstock"></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                            
+    
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-outline-primary" data-bs-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+
+
+        
+
+
+
+    </div>
+
+    
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>

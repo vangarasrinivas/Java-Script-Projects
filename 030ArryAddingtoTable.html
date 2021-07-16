@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Addig to Table</title>
+
+
+    <script>
+        var categories=["Shoping", "games", "fashion", "electronics", "mobiles", ""];
+        
+
+        function bodyLoad(){
+            var tbody=document.getElementById("tbody");
+            
+            
+            
+            
+            for(var item of categories){
+                var tr=document.createElement("tr");
+                var td=document.createElement("td");
+                
+                td.innerHTML=item;
+                tr.appendChild(td);
+                tbody.appendChild(tr);
+            }
+
+
+        }
+    </script>
+
+
+</head>
+<body onload="bodyLoad()">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Categories</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+
+    </table>
+
+
+    
+</body>
+</html>

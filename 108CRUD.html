@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+        function addStudent(){
+            var student={
+                fName:"",
+                mNumber:"",
+                qualification:"",
+                technologoes:"",
+                email:"",
+                password:""                
+            }
+
+            for(details in student){
+                student[details]=document.getElementById(details).value;
+            }
+
+            console.log(student)
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="w-50 border border-danger p-4 my-2">
+            <form action="">
+                <div>
+                    <label class="text-primary" for="fName" class="form-label">Full Name</label>
+                    <div>
+                        <input type="text" id="fName" class="form-control">
+                    </div>
+                    
+                </div>
+                <div class="mt-2">
+                    <label class="text-primary" for="mNumber" class="form-label">Mobile Number:</label>
+                    <div>
+                        <input type="number" id="mNumber" class="form-control">
+                    </div>
+                    
+                </div>
+
+                
+                <div class="mt-2">
+                    <label class="text-primary" for="qualification" class="form-label">Qualification</label>
+                    <div>
+                        <input type="text" id="qualification" class="form-control">
+                    </div>
+                    
+                </div>
+                <div class="mt-2">
+                    <label class="text-primary" for="technologoes" class="form-label">Technologies</label>
+                    <div>
+                        <input type="text" id="technologoes" class="form-control">
+                    </div>
+                    
+                </div>
+
+                <div class="mt-2">
+                    <label class="text-primary" for="email" class="form-label">Email</label>
+                    <div>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+                    
+                </div>
+
+                <div class="mt-2">
+                    <label class="text-primary" for="password" class="form-label">Password</label>
+                    <div>
+                        <input type="password" id="password" class="form-control">
+                    </div>
+                    
+                </div>
+
+            </form>
+            <div class="mt-2">
+                <button id="adduser" data-bs-toggle="modal" data-bs-target="#studentDetails" onclick="addStudent()" class="btn btn-outline-danger">Add</button>
+
+                <div class="modal fade show" id="studentDetails">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2>Student Details</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

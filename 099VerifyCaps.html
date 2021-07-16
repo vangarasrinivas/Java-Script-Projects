@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Caps</title>
+    <link rel="stylesheet" href="/fonts/css/all.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function VerifyCaps(e){
+                var error = document.getElementById("error");
+                if(e.keyCode>=65 && e.keyCode<=90) {
+                    error.style.display = "block";
+                } else {
+                    error.style.display = "none";
+                }
+            }
+
+    </script>
+
+</head>
+<body class="container-fluid">
+    <fieldset>
+        <legend>Password</legend>
+
+        <input onkeypress="VerifyCaps(event)" type="password" id="txtPwd" class="form-control">
+
+        <div id="error" class="mt-4" style="display: none;">
+            <span class="fa fa-exclamation text-warning"></span>
+            <span class="text-warning">Caps is ON.</span>
+        
+        </div>
+    </fieldset>
+    
+</body>
+</html>

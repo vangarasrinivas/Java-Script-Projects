@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loop</title>
+    <script>
+        var data=[
+            {cattegory:"Electronics", products:["TV", "Washing Machine", "Speakers"]},
+            {cattegory:"Footwear", products:["Sandals", "Crocs", "Shoews"]},
+            {cattegory:"Fashion", products:["Shirts", "T-Shirts", "Jeans"]}
+            
+        ];
+
+        function bodyLoad(){
+            var mainList=document.getElementById("mainList");
+            for(var i=0; i<data.length; i++){
+                var listItem=document.createElement("li");
+                listItem.innerHTML=data[i].cattegory;
+                mainList.appendChild(listItem);
+
+                for(j=0; j<data[i].products.length
+                
+                
+                ; j++){
+                    var childUl=document.createElement("ul");
+                    var childLi=document.createElement("li");
+                    childLi.innerHTML=data[i].products[j];
+
+                    childUl.appendChild(childLi);
+
+
+                    listItem.appendChild(childUl);
+
+                }
+                
+            }              
+
+
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+
+    <div class="">
+        <ol id="mainList">
+
+        </ol>
+    </div>
+    
+</body>
+</html>

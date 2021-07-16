@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Decision</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+
+        var user={UserName:'Srinu', Password:'srinu@123'}
+
+        function LoginClick(){
+            var textUsername=document.getElementById("textUsername").value;
+            var textPassword=document.getElementById("textPassword").value;
+            var msg=document.getElementById("msg");
+            if(user.UserName==textUsername){
+                if(user.Password==textPassword){
+                    document.write("Login Successfully");
+                }
+                else{
+                    msg.innerHTML="Invalid Password";
+                }                
+            }
+            else{
+                msg.innerHTML="Invalid Username";
+            }
+
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="row mt-4 d-grid w-25 bg-light">
+                <div class="col-12">
+                    <Label class="text-primary">Username</Label>
+                    <div>
+                        <input type="text" id="textUsername" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <Label class="text-primary">Password</Label>
+                    <div>
+                        <input type="password" id="textPassword" class="form-control">
+                    </div>
+                </div>
+                <div class="col-12 text-right mt-2">
+                    <button type="button" id="textButton" class="btn btn-primary" onclick="LoginClick()">Login</button>
+                </div>
+
+                <div class="col-12 m-4">
+                    <span id="msg" class="text-danger"></span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    
+</body>
+</html>

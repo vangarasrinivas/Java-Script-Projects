@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object</title>
+    <script>
+        function getDetails(){
+            document.getElementById("lblServer").innerHTML=location.host;
+
+            var protocal=location.protocol;
+
+            var msg=document.getElementById("msg");
+
+            if(protocal=="http:"){
+                msg.innerHTML= "You are accessing un-secured Webserver";
+            }
+
+            if(protocal=="https:"){
+                msg.innerHTML="You are accessing from";
+            }
+
+            if(protocal=="file:"){
+                msg.innerHTML="You are accessing from file server - please use a web server";
+            }
+
+            document.getElementById("lblProtocal").innerHTML=location.protocol;
+
+            document.getElementById("lblPort").innerHTML=location.port;
+
+            document.getElementById("lblURL").innerHTML=location.href;
+
+        }
+    </script>
+</head>
+<body>
+
+    <fieldset>
+        <legend><button onclick="getDetails()" type="button">Get Location Details</button></legend>
+        <table>
+            <tr>
+                <td>Server Name and IP Address</td>
+                <td id="lblServer"></td>
+            </tr>
+            <tr>
+                <td>Protocal</td>
+                <td id="lblProtocal"></td>
+                <td><span id="msg"></span></td>
+            </tr>
+            <tr>
+                <td>Port</td>
+                <td id="lblPort"></td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td id="lblURL"></td>
+            </tr>
+            
+        </table>
+    </fieldset>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirt Colour</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        function changeColour(obj){
+            var pic=document.getElementById("pic");
+            
+            switch(obj){
+                case "Red":
+                    pic.src="/assets/images/shirt-red.jpg";
+                    break;
+
+                case "Green":
+                    pic.src="/assets/images/shirt-green.jpg";
+                    break;
+
+                case "Yellow":
+                    pic.src="/assets/images/shirt-yello.jpg";
+                    break; 
+                    
+                    
+                case "White":
+                    pic.src="/assets/images/shirt-white.jpg";
+                    break;    
+
+            }
+
+
+        }
+    </script>
+    
+</body>
+<div>
+    <button name="Red" type="button" onclick="changeColour(this.name)" style="background-color: red;"> </button>
+    <button name="Green" type="button" onclick="changeColour(this.name)" style="background-color: green;"> </button>
+    <button name="Yellow" type="button" onclick="changeColour(this.name)" style="background-color: yellow;"> </button>
+    <button name="White" type="button" onclick="changeColour(this.name)" style="background-color: white;"> </button>
+</div>
+    <div align="center"> 
+        <img id="pic" src="/assets/images/shirt-white.jpg" alt="" width="100" height="100">
+
+   </div>
+</html>

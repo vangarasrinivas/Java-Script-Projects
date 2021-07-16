@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Example</title>
+</head>
+<body>
+    <script>
+        class Product{
+            Name="";
+            Price=0;
+            InStock=true;
+            Quantity=1;
+            Total(){
+                return this.Price * this.Quantity;
+            }
+
+            print(){
+                document.write(`Name = ${this.Name} <br> Price = ${this.Price} <br> In Stock = ${this.InStock} <br> Quantity = ${this.Quantity} <br> Total = ${this.Total()} <br> <br> `);
+            }
+        }
+
+
+        var TV=new Product;
+        TV.Name="Samsung TV";
+        TV.Price=2999;
+        TV.Quantity=4;
+        
+        
+        TV.print();
+
+
+
+        var TV1=new Product;
+        TV1.Name="Samsun TV";
+        TV1.Price=5999.50;
+        TV1.Quantity=3;
+
+
+        TV1.print();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Object as Parameter</title>
+</head>
+<body>
+    <script>
+        function printList(object, list){
+            for(var property in object){
+                document.write(`${property}:${object[property]}<br>`);
+            }
+
+            for(var item of list){
+                document.write(`${item}<br>`);
+            }
+        }
+
+
+        class product{
+            TV={name:"Samsun TV", price:19999}
+
+            citys=["hyd", "gnt", "bng"];
+
+            print(){
+                printList(this.TV, this.citys)
+
+
+                printList({name:"Sont TV", price:5999}, ["Speaker", "Combo"])
+            }
+        }
+
+        var obj=new product;
+        obj.print();
+    </script>
+    
+</body>
+</html>

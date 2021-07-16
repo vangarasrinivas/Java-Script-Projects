@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Removing Array</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+        var cities=["delhi", "hyderabad"];
+
+        
+
+        function loadCity(){
+
+            document.getElementById("lstCitys").innerHTML="";
+
+
+            
+
+
+            for(var item of cities){
+
+                
+                var lstCitys=document.getElementById("lstCitys");
+                
+                var opt=document.createElement("option");
+                opt.text=item;
+
+
+
+
+                lstCitys.appendChild(opt);
+            }
+
+
+        }
+
+        function bodyLoad(){
+            loadCity();
+        }
+
+
+
+        function addItem(){
+            var textCity=document.getElementById("textCity").value;
+
+            cities.push(textCity);
+
+            alert("City Added");
+
+            //after adding city text box will be empty. So we will use below tag emppty ""
+
+            document.getElementById("textCity").value="";
+            
+            loadCity();
+            
+
+        }
+
+        function removeItem(){
+
+            var selectedItem=document.getElementById("lstCitys").value;
+
+            var slectedIndex=cities.indexOf(selectedItem);
+
+            var status=confirm(`Are you sure, want to delete ${selectedItem}`);
+
+            if(status==true){
+                cities.splice(slectedIndex, 1);
+            }
+            else{
+                alert("you cancel the delete city")
+            }
+
+            loadCity();            
+        }
+
+
+
+        function sortItem(){
+            cities.sort();
+            loadCity();
+        }
+
+
+
+
+    </script>
+</head>
+<body onload="bodyLoad()">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 m-4 border border-danger p-4 bg-info">
+                <h2 class="text-danger bg-dark py-2 text-center">Adding and Removing</h2>
+                <div class="form-group">
+                    <label for="" class="form-label fs-4">New City</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="textCity">
+                        <button class="btn btn-primary input-group-text" onclick="addItem()">Add city</button>
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="" class="form-label fs-4">City List</label>
+                    <div class="input-group">
+                        <select name="" class="form-select" id="lstCitys" size="4">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group my-3">
+                    <button class="btn btn-primary" onclick="removeItem()">Remove City</button>
+                    <button class="btn btn-primary" onclick="sortItem()">Sort City</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

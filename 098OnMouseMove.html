@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Mouse Move Example</title>
+</head>
+
+    <script>
+        function colorChange(obj){
+            document.getElementById("msg").style.color=obj.id;
+            
+        }
+    </script>
+
+<body>
+
+    <h1>Color Change By using onMouseMove Event</h1>
+
+
+    <div onmousemove="colorChange(this)" style="padding: 20px; background-color: red;" id="red">
+        Red
+    </div>
+    <div onmousemove="colorChange(this)" style="padding: 20px; background-color:green;" id="green">
+        Green
+    </div>
+    <div onmousemove="colorChange(this)" style="padding: 20px; background-color:pink;" id="pink">
+        Pink
+    </div>
+
+    <span id="msg" style="font-size: 50px;">Simple Text</span>
+    
+</body>
+</html>

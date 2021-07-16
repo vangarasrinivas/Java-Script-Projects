@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding into Array list</title>
+    <script>
+        var categories=["Electronics", "Shirts", "Jeans", "Mobiles", "Fashion", "", ""];
+
+
+        function bodyLoad(){
+                    for(var item of categories){
+                    var lstCategories=document.getElementById("lstCategories");
+                    var listItem=document.createElement("li");
+                    listItem.innerHTML=item;
+                    lstCategories.appendChild(listItem);
+                }
+
+            
+        }
+
+
+        
+
+
+        
+
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <fieldset>
+        <legend>Browse Categories</legend>
+        <ol id="lstCategories"></ol>
+    </fieldset>
+    
+</body>
+</html>

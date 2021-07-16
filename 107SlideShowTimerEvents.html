@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/fonts/css/all.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        var pics=[{Name:"Jeans", Photo:"/assets/images/jeans.jpeg"},
+                    {Name:"T-shirt", Photo:"/assets/images/Tshirt.jpg"},
+                    {Name:"Shirt", Photo:"/assets/images/shirt-green.jpg"},
+                    {Name:"Speaker", Photo:"/assets/images/speaker.jpg"},
+                    {Name:"Sandals", Photo:"/assets/images/sandals.jpg"},
+                    {Name:"Crocks", Photo:"/assets/images/crocs.jpg"},
+                    {Name:"Shoew", Photo:"/assets/images/layasa.jpeg"},
+                    {Name:"Mobile", Photo:"/assets/images/iphone.jpeg"},
+                    {Name:"Washing-Machine", Photo:"/assets/images/washing-machine.jpg"},
+                    {Name:"AC Room", Photo:"assets/images/hotel-nonAC.jpg"}
+                    ];
+         
+        function showImage(index){
+            document.getElementById("pic").src=pics[index].Photo;
+            document.getElementById("lblName").innerHTML=pics[index].Name;
+
+        }
+
+        var count=0;
+
+        function slideShow(){
+            count++;
+            showImage(count);
+        }
+
+        
+
+       
+        function bodyLoad(){
+            showImage(0);
+        }
+
+
+        function playClick(){
+
+            document.getElementById("msd").innerHTML="SLide Show Going";
+
+            setInterval(slideShow, 2000);
+        
+        }
+
+
+
+        
+    </script>
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+    <div class="card">
+        <div class="card-header">
+            <h3 id="msg"></h3>
+        </div>
+        <div class="card-body">
+            <img src="" id="pic" width="auto" height="300" alt="">
+            <div>
+                <h4 id="lblName"></h4>
+            </div>
+            <div>
+                <input type="range" min="0" max="5" id="slider" value="0">
+            </div>
+        </div>
+        <div class="card-footer">
+            <button onclick="playClick()" class="btn btn-outline-success">
+                <span class="fa fa-play-circle fs-4"></span>
+            </button>
+
+            <button class="btn btn-outline-danger">
+                <span class="fa fa-pause-circle fs-4"></span>
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>

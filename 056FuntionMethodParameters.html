@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parameters in Functions and Methods</title>
+</head>
+<body>
+
+    <script>
+        function f1(start, end){
+            for(i=start; i<end; i++){
+                document.write(i+"<br>");
+            }
+
+        }
+
+        class pDemo{
+            print(){
+
+                
+                f1(100,150);
+
+                f1(200,160);
+            }
+        }
+
+        var pNo=new pDemo;
+        pNo.print();
+
+
+    </script>
+    
+</body>
+</html>

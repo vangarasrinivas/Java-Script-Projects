@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Plugin</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            if(navigator.plugins[`'Chrome PDF Viewer`]==undefined){
+            alert("please install PDF Plugin");
+            location.href="http://www.adobe.com/downloads";
+        }
+        else {
+          document.write("You can View PDF documents");
+        }
+        }
+
+        f1();
+
+
+    </script>
+</body>
+</html>

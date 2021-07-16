@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArroW function</title>
+</head>
+<body>
+    <script>
+        // var hello=()=>document.write("Welcome to Arrow function");
+        // hello();
+
+
+        // var hello=()=>{document.write("Hello"); document.write("Arrow Funct")}
+        // hello();
+
+
+        // var product=(name, price)=>{document.write(`name=${name} <br> price=${price}`)}
+        // product("TV", 1000);
+
+
+        // var addition=(a,b)=>a+b;
+        // document.write(`Addition = ${addition(10,20)}`);
+
+
+        // var products=[{Name:"TV", category:"Electronic"},
+        //             {Name:"Cloth", category:"Fashion"},
+        //             {Name:"Sandals", category:"Footwear"},
+        //             {Name:"Washing Machine", category:"Electronic"},
+        //             {Name:"T-Shirt", category:"Fashion"}];
+
+
+        // var Electronics=products.filter(x=>x.category=="Electronic");
+
+        // var Fashion=products.filter(function(x){return x.category=="Fashion"});
+
+        // document.write("<h2>Electronics</h2>");
+
+        // for(var item of Electronics){
+        //     document.write(item.Name + "<br>");
+        // }
+
+        // document.write("<h2>Fashion</h2>");
+
+        // for(var item of Fashion){
+        //     document.write(item.Name.length + "<br>");
+        // }
+
+
+
+
+        var products = [
+       {Name:"TV", Category: "Electronics"},
+       {Name:"Nike Casuals", Category:"Footwear"},
+       {Name:"Earpods", Category: "Electronics"}
+   ];
+   document.write(`Electronics Count:${products.filter(x=>x.Category=="Electronics").length}`);
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JavaScript</title>
+</head>
+<body>
+    <script>
+        function f1(){
+            var prodcuts={
+                Name:"",
+                Price:"",
+                Qty:"",
+                total:function(){
+                    return this.Price * this.Qty;
+                },
+
+                print: function(){
+                    document.write(`
+                    Name: ${this.Name} <br>
+                    Price: ${this.Price} <br>
+                    Qty: ${this.Qty} <br>
+                    total: ${this.total()} <br>
+                    `);
+                }
+
+            }
+
+            prodcuts.Name="Samsung TV";
+            prodcuts.Price=4000;
+            prodcuts.Qty=2;
+            prodcuts.print();
+
+
+            document.write(`<hr>`);
+
+
+            prodcuts.Name="Casual Shoew";
+            prodcuts.Price=5000;
+            prodcuts.Qty=4;
+            prodcuts.print();
+
+        }
+
+        f1();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Properties</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+
+        function dataBase(obj){
+            switch(obj){
+                case "Insert":
+                    alert("Record Inserted");
+                    break;
+                
+                case "Update":
+                    alert("Record Updated");
+                    break;
+                 
+                 case "Delete":
+                     alert("Record Deleted");
+                     break;   
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+    <div class="container-fluid mt-4">
+        <button name="Insert" onclick="dataBase(this.name)" class="btn  btn-outline-primary">Insert</button>
+        <button name="Update" onclick="dataBase(this.name)" class="btn  btn-outline-success">Update</button>
+        <button name="Delete" onclick="dataBase(this.name)" class="btn  btn-outline-danger">Delete</button>
+    </div>
+    
+    
+</body>
+</html>

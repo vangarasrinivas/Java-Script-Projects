@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Example Products</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/fonts/css/all.css">
+
+    <style>
+       
+    </style>
+
+    <script>
+        var products=["/assets/images/jeans.jpeg", "/assets/images/layasa.jpeg", "/assets/images/iphone.jpeg",
+        "/assets/images/particle-board.jpeg", "/assets/images/flymachine.jpeg", "/assets/images/flower2.jpg",
+        "/assets/images/flower3.jpg", "/assets/images/flower4.jpg"];
+
+
+        function ShowImage(index){
+            var pic=document.getElementById("pic");            
+            pic.src=products[index];
+
+        }
+
+        function UpdateSlider(){
+            document.getElementById("slider").value=count;
+
+        }
+
+
+        function bodyLoad(){
+            ShowImage(0);
+        }
+
+
+        var count=0;
+
+        function NextClick(){
+            if(count<(products.length-1)){
+                count++; //count=count+1
+                ShowImage(count);
+                UpdateSlider();
+            }
+            else{
+                alert("End of Show");
+            }
+        }
+
+
+
+        function PreviousClick(){
+            if(count>0){
+                count--; //count = count-1
+                ShowImage(count);
+                UpdateSlider();
+            }
+            else{
+                alert("No More Images");
+            }
+
+        }
+
+
+
+        function ChangeImage(){
+            var sliderValue=document.getElementById("slider").value;
+            ShowImage(sliderValue);
+        }
+
+
+
+
+
+
+
+    </script>
+    
+
+</head>
+<body class="container-fluid" onload="bodyLoad()">
+
+    <div class="card mt-3">
+        <div class="card-header text-center">
+            <h2 class="text-danger">Product Images</h2>
+        </div>
+
+        <div class="card-body text-center">
+            <div class="row">
+                <div class="col">
+                    <img src="" id="pic" class="" height="300">
+                    <p>
+                        <input onchange="ChangeImage()" type="range" min="0" max="7" value="0" id="slider">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card-footer text-center">
+            <button class="btn btn-outline-danger" onclick="PreviousClick()">
+                <span class="fa fa-arrow-alt-circle-left"></span>
+            </button>
+            <button class="btn btn-outline-danger" onclick="NextClick()">
+                <span class="fa fa-arrow-alt-circle-right"></span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <div>
+        
+    </div>
+    
+</body>
+</html>

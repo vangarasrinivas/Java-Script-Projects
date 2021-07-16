@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Adding into Drop Down list</title>
+    <script>
+
+        var products=["All", "Men", "Women", "boys", "girls", "babys"];
+
+        function bodyLoad(){
+            var slectOpt=document.getElementById("selectOpt");
+            for(var item of products){
+                var opt=document.createElement("option");
+                opt.text=item;
+                slectOpt.appendChild(opt);
+
+            }
+
+        }
+
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <fieldset>
+        <legend>Array item Dynamic</legend>
+        <form action="">
+            <select name="" id="selectOpt">
+
+            </select>
+        </form>
+    </fieldset>
+    
+</body>
+</html>

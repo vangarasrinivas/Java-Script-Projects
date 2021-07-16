@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consol Options</title>
+    <style>
+        body{
+            background-color: skyblue;
+        }
+        
+    </style>
+    <script type="text/javascript">
+    function confirmFun(){
+        x=confirm("You Want delete Record");
+        console.info("Delete Initiated");
+        if(x==true){
+            console.warn("Record Deleted");
+        }
+        if(x==false){
+            console.error("Record Not Delted");
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <h1>Click Button To Delete Record</h1>
+    <button onclick="confirmFun()">Button</button>
+    
+</body>
+</html>

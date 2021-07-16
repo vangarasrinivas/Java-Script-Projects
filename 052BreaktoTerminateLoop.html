@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break to Terminate Loop</title>
+
+    <script>
+        var data=[
+            {uName:"Srinu123"},
+            {uName:"Srinu1@23"},
+            {uName:"srinu1232"},
+            {uName:"Srinu_123"},
+            {uName:"srinu123"},
+            {uName:"Vasu123"},
+            {uName:"vasu@123"},
+            {uName:"vasu12345"},
+        ];
+
+        function verifyUser(){
+            var txtUserName=document.getElementById("txtUserName").value;
+            var msg=document.getElementById("msg");
+
+            for(var item of data){
+                if(item.uName==txtUserName){
+                    msg.innerHTML="This User Name Aleady Taken".fontcolor('red');
+                    break;
+                }
+                else{
+                    msg.innerHTML="User Name Available".fontcolor('green');
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Verify User</legend>
+            Enter User Name:<br>
+            <input onkeyup="verifyUser()" type="text" id="txtUserName"><br>
+            <span id="msg"></span>
+        </fieldset>
+    </div>
+</body>
+</html>

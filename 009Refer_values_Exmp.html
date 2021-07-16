@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function RegisterClick(){
+            document.getElementById("lblname").innerHTML=document.getElementById("pname").value;
+            document.getElementById("lblprice").innerHTML=document.getElementById("pprice").value;
+            document.getElementById("lbldate").innerHTML=document.getElementById("manufdate").value;
+            document.getElementById("lblshippedto").innerHTML=document.getElementById("shippedto").value;
+
+
+                var stock = document.getElementById("optStock");
+                var status;
+                if(stock.checked) {
+                    status = "Available";
+                } else {
+                    status = "Out of Stock";
+                }
+
+                document.getElementById("lblstock").innerHTML = status;
+            
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Register Product</h2>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" id="pname" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">Price</label>
+                    <input type="text" id="pprice" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">Manufacture Date</label>
+
+                    <input type="date" id="manufdate" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">SHipped To</label>
+                    <div>
+                        <select class="form-control" id="shippedto">
+                            <option value="hyd">Hyderabad</option>
+                            <option value="delhi">Delhi</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>In Stock</label>
+                    <div>
+                        <input type="checkbox" id="optStock"> Yes
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" onclick="RegisterClick()">Register</button>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <h2>Product Details</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover bg-info" border="1">
+                        <tbody>
+                            <tr>
+                                <td>Name</td>
+                                <td id="lblname"></td>
+                            </tr>
+                            <tr>
+                                <td>Price</td>
+                                <td id="lblprice"></td>
+                            </tr>
+                            <tr>
+                                <td>Manufactured</td>
+                                <td id="lbldate"></td>
+                            </tr>
+                            <tr>
+                                <td>Shhipped to</td>
+                                <td id="lblshippedto"></td>
+                            </tr>
+                            <tr>
+                                <td>Stock</td>
+                                <td id="lblstock"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    
+</body>
+</html>

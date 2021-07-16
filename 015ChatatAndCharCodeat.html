@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharAt and Char Code</title>
+
+    <script>
+        // function charAt(){
+        //     var s="Hellow Srinu";
+        //     var s2=s.charAt(5);
+        //     document.write(s2);
+        // }
+        // charAt();
+
+            function verifyString(){
+
+                var textname=document.getElementById("txtName").value;
+
+                var msg=document.getElementById("msg")
+
+                if(textname.charCodeAt(0)>=65 && textname.charCodeAt(0)<=90){
+                    document.write(`Hello ${textname}`);
+                }
+                else{
+                    msg.innerHTML="Letter Must be Start with Capital Letter";
+                }
+
+            }
+
+        
+
+
+
+    </script>
+
+</head>
+<body>
+
+        Name: 
+        <input type="text" placeholder="Name must start with Uppercase Letter" id="txtName" onblur="verifyString()">
+        <span id="msg"></span>
+
+
+    
+</body>
+</html>

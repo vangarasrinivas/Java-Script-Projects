@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Function</title>
+    
+    <style>
+        div{
+            width: 400px;
+            border: 5px solid red;
+            border-radius: 10px;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+
+    <script>
+     
+                // function dateFun(){
+                // var mfd=new Date();
+                
+                // var msg=document.getElementById("msg").innerHTML=mfd.toLocaleTimeString();  
+                
+                // setInterval("dateFun()", 1000)
+
+                
+                //  }
+
+                    function getTimer(){
+                    var today=new Date();
+                    
+                    var msg=document.getElementById("msg");
+
+
+                    msg.innerHTML=today.toLocaleTimeString();
+
+                    setInterval("getTimer()", 1000);
+
+                    }             
+    
+    </script>
+
+</head>
+<body>
+
+    <div>
+        <h1>Timer</h1>
+        <button onclick="getTimer()">Click Me</button>
+        <span ><h1 id="msg"></h1></span>
+    </div>
+    
+
+    
+    
+    
+</body>
+</html>

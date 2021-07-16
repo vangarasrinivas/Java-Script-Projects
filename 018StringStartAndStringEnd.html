@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Start And String End</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function verifyCard(){
+            var cardId=document.getElementById("textCard").value;
+            var pic=document.getElementById("pic");
+            if(cardId.startsWith("444")){
+                pic.src="/assets/images/visa_card.jpg";
+            }
+            else if(cardId.startsWith("555")){
+                pic.src="/assets/images/master_card.jpg";
+            }
+            else{
+                pic.src="";
+                pic.alt="N/A";
+            }
+        }
+
+        function verifyEmail(){
+            var emailId=document.getElementById("email").value;
+            var msg=document.getElementById("msg");
+            if(emailId.endsWith("@gmail.com")){
+                msg.innerHTML="Email Verified";
+                
+            }
+            else{
+                msg.innerHTML="Email Not Verified";
+            }          
+
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <fieldset>
+            <legend>Verify Card</legend>
+            <dl>
+                <dt>Your Card Number</dt>
+                <dd class="input-group">
+                    <input type="text" class="form-control" id="textCard" onkeyup="verifyCard()">
+                    <span class="input-group-text">
+                        <img src="" id="pic" width="60" height="20px" alt="">
+                    </span>
+                </dd>
+                <dt>Email</dt>
+                <dd class="input-group">
+                    <input type="text" id="email" class="form-control" placeholder="Your Email Account" onblur="verifyEmail()">
+                    <div class="input-group-text">
+                        <span id="msg"></span>
+                    </div>
+                </dd>
+            </dl>
+        </fieldset>
+
+    </div>
+</body>
+</html>

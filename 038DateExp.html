@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Example Set</title>
+    <style>
+        div{
+            width: 300px;
+            margin: auto;
+            height: 300px;
+            border:  5px solid rgba(218, 221, 26, 0.945);
+            text-align: center;
+        }
+
+        button{
+           
+          margin: 20px;
+        }
+
+    </style>
+    <script>
+        function wishes(){
+            var now=new Date();
+            var hour=now.getHours();
+
+            var pic=document.getElementById("pic");
+
+            if(hour>=00 && hour<=12){
+                pic.src="/assets/images/morning.gif";
+            }
+
+            else if(hour>12 && hour<=19){
+                pic.src="/assets/images/evening.gif";
+            }
+
+            else{
+                pic.src="/assets/images/night.gif";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <div>
+        <button onclick="wishes()">clickme</button><br>
+       
+        <img src="" id="pic" width="200" height="200" alt="">
+
+    </div>
+    
+</body>
+</html>

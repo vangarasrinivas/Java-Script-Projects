@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer HTML DOM Elements</title>
+
+
+
+    <script type="text/javascript">
+
+
+    function bodyload(){
+
+
+
+        // <h1>Refer by using DOM heirarchy</h1>
+
+
+        // window.document.images[0].src="/assets/images/layasa.jpeg";
+
+
+        // window.document.forms[1].elements[0].value="Hello";
+
+
+        // window.document.forms[0].elements[1].value="Register";
+
+
+
+
+
+        // Refer Values By using name
+
+
+        // img.src="/assets/images/layasa.jpeg";
+
+        // form1.btn1.value="Register1"
+
+
+        // form3.text3.value="Srinivas";
+
+
+
+        // Refer By using ID
+
+        // document.getElementById("img").src="/assets/images/layasa.jpeg";
+        // document.getElementById("btn2").value="Register2";
+        // document.getElementById("text3").value="Srinivas"; 
+
+
+
+        // By Using Tag Name
+
+        // x=document.getElementsByTagName("img");
+        // alert("Total no of images" + x.length);
+
+
+        // BY Using Class Names
+
+        // x=document.getElementsByClassName("text");
+        // alert("No of Text Boxes are" + x.length);
+
+
+        // BY Using
+
+
+        }
+
+
+    </script>
+
+    
+
+</head>
+<body onload="bodyload()">
+
+    
+
+    <div>
+        <img name="img" width="100" height="100" border="1" id="img">
+    </div>
+
+    <h2>Register</h2>
+
+    <form name="form1" id="form1" action="">
+        Username
+        <input name="text1" id="text1" type="text" class="text">
+        <input name="btn1" id="btn1" type="button" class="text">
+    </form>
+    <form name="form2" id="form2" action="">
+        Username
+        <input name="text2" id="text2" type="text" class="text">
+        <input name="btn2" id="btn2" type="button" class="text">
+    </form>
+    <form name="form3" id="form1" action="">
+        Username
+        <input name="text1" id="text3" type="text" class="text">
+        <input name="btn3" id="btn3" type="button" class="text">
+    </form>
+    
+    
+
+    
+</body>
+</html>

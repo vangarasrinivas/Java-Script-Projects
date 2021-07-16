@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Parameters</title>
+</head>
+<body>
+    <script>
+        function printProduct(id, pName, pPrice){
+            if(id==undefined){
+                document.write(`Name=${pName}<br>
+                                Price=${pPrice}`);
+            }
+
+            else{
+                document.write(`id=${id}<br>
+                                Name=${pName}<br>
+                                Price=${pPrice}`);
+            }
+        }
+
+        class Product{
+            print(){
+                printProduct(undefined, "TV", 3400);
+            }
+        }
+
+        var P1=new Product;
+        P1.print();
+    </script>
+    
+</body>
+</html>

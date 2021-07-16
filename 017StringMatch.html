@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Match</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        progress{
+            height: 40px;
+        }
+    </style>
+    <script type="text/javascript">
+    function verifyPassword(){
+        var password=document.getElementById("password").value;
+        var regExp=/(?=.*[A-Z])\w{4,10}/;
+        var msg=document.getElementById("msg");
+        var strength=document.getElementById("strength");
+        
+
+        function showStrength(min, max, value){
+            strength.min=min;
+            strength.max=max;
+            strength.value=value;
+
+        }
+
+
+        if(password==""){
+            msg.innerHTML="Password Required";
+        }
+        else{
+            if(password.match(regExp)){
+                msg.innerHTML="Strong Password";
+                showStrength(1, 100, 100);
+
+            }
+            else{
+                if(password<4){
+                    msg.innerHTML="Poor Password";
+                    showStrength(1,100,20);
+                    
+                }
+                else{
+                    msg.innerHTML="Weak Password";
+                    showStrength(1,100,70);
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="input-group my-4">
+            <input type="password" id="password" class="form-control" onkeyup="verifyPassword()">
+            <div class="input-group-text">
+                <progress id="strength" min="1" max="100" value="0"></progress>
+            </div>
+        </div>
+        <div id="msg"></div>
+    </div>
+    
+    
+</body>
+</html>

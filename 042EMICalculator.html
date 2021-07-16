@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    
+    <script>
+
+        function rAmount(){
+            var rangeAmount=document.getElementById("rangeAmount").value;
+            var amount=document.getElementById("amount");
+            amount.innerHTML=rangeAmount;
+        }
+
+
+        function rInterest(){
+            var rangeInterest=document.getElementById("rangeInterest").value;
+            var interest=document.getElementById("interest");
+            interest.innerHTML=rangeInterest;
+        }
+
+
+        function rMonth(){
+            var rangeMonth=document.getElementById("rangeMonth").value;
+            var Month=document.getElementById("Month");
+            Month.innerHTML=rangeMonth;
+        }
+
+  
+
+
+        function emiCalculate(){
+
+            var rangeAmount=parseInt(document.getElementById("rangeAmount").value);
+            var rangeInterest=parseFloat(document.getElementById("rangeInterest").value);
+            var rangeMonth=parseInt(document.getElementById("rangeMonth").value);
+
+
+
+            var emi=(rangeAmount*rangeInterest*Math.pow(1+rangeInterest, rangeMonth))/(Math.pow(1+rangeInterest, rangeMonth)-1);
+            var monthlyPayment=document.getElementById("monthlyPayment");
+            monthlyPayment.innerHTML=Math.round(emi);
+
+
+
+            // rangeInterest=rangeInterest/(12*100);
+            // var emi=rangeAmount*rangeInterest * Math.pow(1+rangeInterest, rangeMonth)/(Math.pow(1+rangeInterest, rangeMonth)-1);
+            // var monthlyPayment=document.getElementById("monthlyPayment");
+            // monthlyPayment.innerHTML=emi;
+
+            // var totalAmount=document.getElementById("totalAmount");
+            // totalAmount.innerHTML=emi*rangeMonth;
+
+
+        }
+
+
+    
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid bg-secondary">
+        <h2 class="bg-info py-3 mt-2 text-center">EMI Calcultor</h2>
+
+
+        <div class="row">
+            <div class="col-12">
+                <input id="rangeAmount" type="range" class="form-range" min="100000" max="1000000" onchange="rAmount()">
+            </div>
+            <div class="col-12">
+                <input id="rangeInterest" type="range" class="form-range" min="1" max="20" step=".1" onchange="rInterest()">
+            </div>
+            <div class="col-12">
+                <input id="rangeMonth" type="range" min="1" max="100"step="1" class="form-range" onchange="rMonth()">
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-4 py-4 m-4 col-md-4  col-sm-10 bg-primary text-light fs-2">
+                Amount : <span class="text-warning">&#x20B9;</span><span id="amount" class="text-warning">100000</span>
+
+            </div>
+            <div class="col-lg-2 py-4 m-4 col-md-3 col-sm-10 bg-primary text-light fs-2">
+                Interest : <span id="interest" class="text-warning">1</span><span class="text-warning">&#x20B9;</span>
+
+            </div>
+            <div class="col-lg-3 py-4 m-4 col-md-3 col-sm-10 bg-primary text-light fs-2">
+                Months : <span id="Month" class="text-warning">1</span>
+            </div>
+
+            <div class="d-grid my-2">
+                <button class="btn btn-outline-warning fs-4" id="btnCalculate" onclick="emiCalculate()">Calculate</button>
+            </div>
+
+        </div>
+
+
+        <div class="row mx-2">
+            <h3 class="text-center my-4 bg-success py-2 text-light">Calculated Rusult</h3>
+
+            <div class="col-lg-4  py-4 bg-danger m-2 text-light fs-4">
+                Monthly Payment :
+                <span id="monthlyPayment"></span>
+            </div>
+            <div class="col-lg-3 py-4 bg-danger m-2 text-light fs-4">
+                Total Interest :
+                <span id="totalInterest"></span>
+
+            </div>
+            <div class="col-lg-4 bg-danger py-4 m-2 text-light fs-4">
+                Total Amount :
+                <span id="totalAmount"></span>
+            </div>
+
+        </div>
+
+        
+
+        
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <script>
+        try
+        {
+            var x=+prompt("Enter x value");
+            var y=+prompt("enter Y Value");
+
+            if(y==0){
+                throw  `${x} con't Devide by ${y}`;
+            }
+
+            if(y>x){
+                throw `${y} not Greter than ${x}`;
+            }
+
+            if(y<0){
+                throw `${x} cont not devide by ${y}`
+            }                   
+
+        }
+
+        catch(exception){
+            alert(exception);
+        }
+
+        finally{
+            document.writeln(`z is ${x/y}`);
+        }
+
+    </script>
+    
+</body>
+</html>

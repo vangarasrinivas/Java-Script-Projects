@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function SubmitCity(){
+                frmRegister.submit();
+            }
+        </script>
+    </head>
+    <body>
+        <form name="frmRegister" onsubmit="alert('Form Submitted')" onreset="alert('Form will reset')">
+            <input type="text" name="txtName">
+            <select onchange="SubmitCity()" name="lstCities">
+                <option>Delhi</option>
+                <option>Hyd</option>
+                <option>Chennai</option>
+            </select>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button">Submit</button>
+        </form>
+    </body>
+</html>

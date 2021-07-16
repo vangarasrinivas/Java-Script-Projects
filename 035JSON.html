@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSOn</title>
+</head>
+<body>
+
+    <script>
+        var products=[
+            {name:"Speakers", price:499.00, cities:["Hyd", "Gnt", "Mcsl"]},
+            {name:"Electronice", price:599.00, cities:["delhi", "Ind"]},
+            {name:"Cloths", price:899.00, cities:["nlg", "DCPL", "Ind"]}];
+
+        for(var product of products){
+            document.write(product.name + "-" + product.cities.toString() + "-" + product.price + "<br>");
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering Data</title>
+</head>
+<body>
+    <script>
+        var products = [
+           {Name: "TV", Price: 45000.44, Cities:["hyd", "Delhi"], Category: "Electronics"},
+           {Name: "Mobile", Price: 1200+0.33, Cities: ['Hyd','Chennai'], Category:"Electronics"},
+           {Name: "Nike Casuals", Price: 4000.44, Cities: ['Chennai', 'Hyd'], Category: "Footwear"}
+       ];
+       var result=products.filter(function(product){
+           return product.Category=="Electronics";
+       });
+
+       for(var item of result){
+           document.write(item.Name + "-" + item.Cities);
+       }
+
+    </script>
+    
+</body>
+</html>

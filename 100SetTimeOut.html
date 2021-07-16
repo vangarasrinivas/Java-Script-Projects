@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Time Out</title>
+
+    <script>
+        function msg1(){
+            document.getElementById("msg").innerHTML="Hello";
+
+        }
+
+        function msg2(){
+
+            document.getElementById("msg").innerHTML="How Are You All!";
+
+        }
+
+        function msg3(){
+            document.getElementById("msg").innerHTML="Welcome to JQuery";
+        }
+
+        function bodyLoad(){
+            setTimeout(msg1, 1000);
+
+            window.m2=setTimeout(msg2, 2000);
+
+            setTimeout(msg3, 3000);
+           
+        }
+
+        function cancelmsg2(){
+            clearTimeout(m2);
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+
+
+    <h2 id="msg" align="center"></h2>
+
+
+    <button onclick="cancelmsg2()">Cancel msg2</button>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue Loop</title>
+</head>
+<body>
+    <script>
+        var data=[{Name:"Speakers", Category:"Electronic"},
+                    {Name:"T-Shirt", Category:"Fashion"},
+                    {Name:"Sandales", Category:"Footwear"},
+                    {Name:"Crocs", Category:"Footwear"},
+                    {Name:"Washing ma", Category:"Electronics"},
+                    {Name:"T-Shirt", Category:"Fashion"},
+                    {Name:"T-Shirt", Category:"Fashion"}
+    ];
+
+
+    for(i=0; i<data.length; i++){
+        if(data[i].Category=="Footwear" || data[i].Category=="Fashion"){
+            continue;
+        }
+
+        document.write(data[i].Name + "<br>")
+    }
+    </script>
+    
+</body>
+</html>

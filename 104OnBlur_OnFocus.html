@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Blur and On Focus</title>
+
+    <script>
+        function Showmsg(){
+            document.getElementById("msg").innerHTML="Name in Blank Letters".fontcolor('red');
+        }
+
+        function Hidemsg(){
+            document.getElementById("msg").innerHTML="";
+
+            var txtName=document.getElementById("txtName").value;
+            document.getElementById("txtName").value=txtName.toUpperCase();
+        }
+
+        
+
+
+    </script>
+
+</head>
+<body>
+
+    <fieldset>
+        <legend>UserName</legend>
+        <input type="text" onfocus="Showmsg()" onblur="Hidemsg()" id="txtName" placeholder="Name in Blank Letters">
+        <div id="msg"></div>
+    </fieldset>
+    
+</body>
+</html>

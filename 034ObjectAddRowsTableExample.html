@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objets Example</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+        var data=[
+                    {name: "Layesa Shoew", price:688.00, photo: "/assets/images/layasa.jpeg"},
+                    {name: "Shirt", price:799.00, photo:"/assets/images/flymachine.jpeg"},
+                    {name: "Jeans", price:999.00, photo:"/assets/images/jeans.jpeg"},
+                    {name: "Mobile", price: 10000.50, photo:"/assets/images/iphone.jpeg"}];
+
+            function bodyLoad(){
+                for(var products of data){
+
+                var tr=document.createElement("tr");
+                var tdName=document.createElement("td");
+                var tdPrice=document.createElement("td");
+                var tdPhoto=document.createElement("td");
+
+
+                tdName.innerHTML=products.name;
+                
+                tdPrice.innerHTML=products.price;
+
+                var pic=document.createElement("img");
+                
+                pic.src=products.photo;
+
+
+                pic.height="100";
+                pic.width="100";
+
+                tdPhoto.appendChild(pic);
+
+                
+
+                tr.appendChild(tdName);
+                tr.appendChild(tdPrice);
+                tr.appendChild(tdPhoto);
+
+                document.querySelector("tbody").appendChild(tr);
+
+
+                
+                }
+            }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    
+    <siv class="row">
+        <div class="col-lg-5 col-md-8 col-sm-12">
+            <table class="table my-4 p-4 table-hover" border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+        
+                </tbody>
+        
+        
+            </table>
+        </div>
+    </siv>
+</body>
+</html>

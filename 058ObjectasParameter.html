@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object as Parameter</title>
+</head>
+<body>
+    <script>
+        function printObject(object){
+            for(var property in object){
+                document.write(`${property}:${object[property]}<br>`);
+            }
+        }
+
+        class product{
+            products={name:"TV", price:3999.50}
+
+            print(){
+                printObject(this.products);
+
+                printObject({name:"Samsung TV", price:6666.50});
+            }
+        }
+
+        var obj=new product;
+        obj.print();
+    </script>
+    
+</body>
+</html>

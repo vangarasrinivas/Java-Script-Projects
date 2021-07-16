@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnMouse Over and Mouse Out</title>
+    <script>
+        function ad1(){
+
+            document.getElementById("pic").src="/assets/images/Tshirt.jpg";
+
+        }
+
+
+        function ad2(){
+            document.getElementById("pic").src="/assets/images/slide1.jpg";
+            
+        }
+
+        function ShowOffer(){
+
+            document.getElementById("pic2").src="/assets/images/image-offer.jpg";
+
+        }
+    </script>
+</head>
+<body>
+    <img id="pic" src="/assets/images/slide1.jpg" width="100" height="100" alt="" onmouseover="ad1()" onmouseout="ad2()">
+    <p>Mouse Over to change Add</p>
+
+    <div>
+        <img id="pic2" src="/assets/images/image-offer.jpg" width="50" alt="" >
+    </div>
+
+
+    
+</body>
+</html>
